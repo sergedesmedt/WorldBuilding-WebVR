@@ -1,1 +1,6 @@
 /* Add application styles & imports to this file! */
+
+a-scene {
+  height: 300px;
+  width: 600px;
+}
