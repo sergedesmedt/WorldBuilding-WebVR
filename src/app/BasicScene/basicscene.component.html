@@ -1,0 +1,25 @@
+<div>
+  <input type="range" min="70" max="150" [(ngModel)]="fov" />
+</div>
+<div>
+  <input type="range" min="-10" max="0" [(ngModel)]="depth" />
+</div>
+<div id="myEmbeddedScene">
+  <a-scene embedded vr-mode-ui="enabled: false">
+    <!--<a-sphere position="1 1 -10" radius="1.25" color="#2DEF5E"></a-sphere>-->
+    <a-sphere
+      [attr.position]="{ x: 0, y: 0, z: depth } | toAFrame"
+      radius="1.25"
+      color="#EF2D5E"
+    ></a-sphere>
+    <!--<a-plane
+    position="0 0 -4"
+    rotation="-90 0 0"
+    width="4"
+    height="4"
+    color="#7BC8A4"
+  ></a-plane>-->
+    <!--<a-sky color="#0000FF"></a-sky>-->
+    <a-camera [attr.fov]="fov"></a-camera>
+  </a-scene>
+</div>
