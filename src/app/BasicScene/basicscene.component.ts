@@ -8,6 +8,8 @@ import { Component, OnInit, Input, VERSION } from '@angular/core';
 export class BasicSceneComponent implements OnInit {
   @Input() pos = '0 1 -10';
   fov: number = 70;
+  near: number = 1;
+  far: number = 100;
   depth: number = -5;
 
   constructor() {}
