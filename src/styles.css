@@ -4,3 +4,5 @@ a-scene {
   height: 300px;
   width: 600px;
 }
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';

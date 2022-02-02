@@ -1,8 +1,4 @@
-<!--
-<div>
-  <input type="range" min="70" max="150" [(ngModel)]="fov" />
-</div>
--->
+<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
 <div>
   <input type="range" min="0" max="100" step="0.1" [(ngModel)]="near" />
 </div>
@@ -17,7 +13,6 @@
 </div>
 <div id="myEmbeddedScene">
   <a-scene embedded vr-mode-ui="enabled: false">
-    <!--<a-sphere position="1 1 -10" radius="1.25" color="#2DEF5E"></a-sphere>-->
     <a-box
       [attr.position]="{ x: 0, y: 0, z: posz } | toAFrame"
       [attr.rotation]="{ x: rotx, y: 0, z: 0 } | toAFrame"
@@ -26,19 +21,6 @@
       width="0.5"
       color="#EF2D5E"
     ></a-box>
-    <!--<a-sphere
-      [attr.position]="{ x: 0, y: 0, z: posz } | toAFrame"
-      radius="2"
-      color="#EF2D5E"
-    ></a-sphere>-->
-    <!--<a-plane
-    position="0 0 -4"
-    rotation="-90 0 0"
-    width="4"
-    height="4"
-    color="#7BC8A4"
-  ></a-plane>-->
-    <!--<a-sky color="#0000FF"></a-sky>-->
     <a-camera [attr.fov]="fov" [attr.near]="near" [attr.far]="far"></a-camera>
   </a-scene>
 </div>
