@@ -10,7 +10,10 @@ export class BasicSceneComponent implements OnInit {
   fov: number = 70;
   near: number = 1;
   far: number = 100;
-  depth: number = -5;
+
+  posz: number = -5;
+
+  rotx: number = 0;
 
   constructor() {}
 
