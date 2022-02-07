@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { PositionEditorComponent } from './position-editor/position-editor.component';
-import { Vector3 } from './vector3';
+import { RotationEditorComponent } from './rotation-editor/rotation-editor.component';
 
 @NgModule({
-  exports: [PositionEditorComponent],
+  exports: [PositionEditorComponent, RotationEditorComponent],
   imports: [CommonModule, FormsModule],
-  declarations: [PositionEditorComponent],
+  declarations: [PositionEditorComponent, RotationEditorComponent],
 })
 export class PropertyEditorsModule {}
