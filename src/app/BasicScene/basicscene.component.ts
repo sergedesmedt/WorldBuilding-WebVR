@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, VERSION } from '@angular/core';
+import { Vector3 } from '../property-editors/vector3';
 
 @Component({
   selector: 'basic-scene',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input, VERSION } from '@angular/core';
   styleUrls: ['./basicscene.component.css'],
 })
 export class BasicSceneComponent implements OnInit {
-  @Input() pos = '0 1 -10';
+  //@Input() pos = '0 1 -10';
   fov: number = 70;
   near: number = 1;
   far: number = 100;
@@ -14,6 +15,12 @@ export class BasicSceneComponent implements OnInit {
   posz: number = -5;
 
   rotx: number = 0;
+
+  boxPosition: string = '0 1 -10';
+
+  onPosChanged(position: Vector3) {
+    this.boxPosition = '' + position.x + ' ' + position.y + ' ' + position.z;
+  }
 
   constructor() {}
 

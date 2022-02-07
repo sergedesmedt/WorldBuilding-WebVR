@@ -1,3 +1,4 @@
+<position-editor (posChangedEvent)="onPosChanged($event)"></position-editor>
 <div>
   <input type="range" min="0" max="100" step="0.1" [(ngModel)]="near" />
 </div>
@@ -5,15 +6,12 @@
   <input type="range" min="0" max="100" step="0.1" [(ngModel)]="far" />
 </div>
 <div>
-  <input type="range" min="-10" max="0" step="0.1" [(ngModel)]="posz" />
-</div>
-<div>
   <input type="range" min="0" max="360" step="0.1" [(ngModel)]="rotx" />
 </div>
 <div id="myEmbeddedScene">
   <a-scene embedded vr-mode-ui="enabled: false">
     <a-box
-      [attr.position]="{ x: 0, y: 0, z: posz } | toAFrame"
+      [attr.position]="boxPosition"
       [attr.rotation]="{ x: rotx, y: 0, z: 0 } | toAFrame"
       depth="2"
       height="1"

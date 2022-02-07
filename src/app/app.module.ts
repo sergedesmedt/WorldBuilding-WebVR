@@ -7,8 +7,10 @@ import { HelloComponent } from './hello.component';
 import { toAFrame } from './toAFrame.pipe';
 import { BasicSceneComponent } from './BasicScene/basicscene.component';
 
+import { PropertyEditorsModule } from './property-editors/property-editors.module';
+
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, PropertyEditorsModule],
   declarations: [AppComponent, HelloComponent, toAFrame, BasicSceneComponent],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
