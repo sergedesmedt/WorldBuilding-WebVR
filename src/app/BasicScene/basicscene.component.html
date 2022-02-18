@@ -1,5 +1,6 @@
 <position-editor (posChangedEvent)="onPosChanged($event)"></position-editor>
 <rotation-editor (rotChangedEvent)="onRotChanged($event)"></rotation-editor>
+<scale-editor (scaleChangedEvent)="onScaleChanged($event)"></scale-editor>
 <div>
   <input type="range" min="0" max="100" step="0.1" [(ngModel)]="near" />
 </div>
@@ -11,6 +12,7 @@
     <a-box
       [attr.position]="boxPosition"
       [attr.rotation]="boxRotation"
+      [attr.scale]="boxScale"
       depth="2"
       height="1"
       width="0.5"

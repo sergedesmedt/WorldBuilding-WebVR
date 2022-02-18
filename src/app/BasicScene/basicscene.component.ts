@@ -13,6 +13,7 @@ export class BasicSceneComponent implements OnInit {
 
   boxPosition: string = '0 0 -5';
   boxRotation: string = '0 0 0';
+  boxScale: string = '1 1 1';
 
   onPosChanged(position: Vector3) {
     this.boxPosition = '' + position.x + ' ' + position.y + ' ' + position.z;
@@ -20,6 +21,10 @@ export class BasicSceneComponent implements OnInit {
 
   onRotChanged(rotation: Vector3) {
     this.boxRotation = '' + rotation.x + ' ' + rotation.y + ' ' + rotation.z;
+  }
+
+  onScaleChanged(scale: Vector3) {
+    this.boxScale = '' + scale.x + ' ' + scale.y + ' ' + scale.z;
   }
 
   constructor() {}
